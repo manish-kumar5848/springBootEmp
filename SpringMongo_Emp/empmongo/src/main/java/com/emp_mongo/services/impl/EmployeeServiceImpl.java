@@ -1,12 +1,12 @@
 package com.emp_mongo.services.impl;
 
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.emp_mongo.model.Employee;
 import com.emp_mongo.repository.EmployeeQueryDao;
 import com.emp_mongo.services.EmployeeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
@@ -28,5 +28,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public void removeEmployee(String empId){
         this.employeeQueryDao.removeEmp(empId);
+    }
+    @Override
+    public void updateEmployee( Employee updatedEmp, String id){
+        this.employeeQueryDao.updateEmp(updatedEmp,id);
     }
 }

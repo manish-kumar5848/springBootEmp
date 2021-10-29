@@ -18,11 +18,11 @@ public class Employee implements Serializable {
     @Id
     private String id;
 
-    private int empId;
+    private String empId;
     private String Name;
     private String emp_dept;
-    private  double mobile;
+    private  String mobile;
     private String email;
-    private float salary;
+    private String salary;
 
 }

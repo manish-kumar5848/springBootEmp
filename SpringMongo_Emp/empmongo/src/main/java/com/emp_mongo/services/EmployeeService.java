@@ -1,8 +1,8 @@
 package com.emp_mongo.services;
 
-import java.util.List;
-
 import com.emp_mongo.model.Employee;
+
+import java.util.List;
 
 public interface EmployeeService {
 
@@ -12,4 +12,5 @@ public interface EmployeeService {
     Employee getEmployeeById(String empId);
     public Employee addEmployee(Employee emp);
     void removeEmployee(String empId);
+    void updateEmployee( Employee updatedEmp, String id);
 }
